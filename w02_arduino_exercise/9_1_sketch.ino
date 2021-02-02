@@ -1,3 +1,26 @@
+/*
+ * 
+ * COUNTDOWN TIMER 
+ * 
+ * Program ini merupakan program arduino yang akan menghitung mundur
+ * waktu dari sebuah waktu yang telah disimpan sebelumnya. Ketika waktu 
+ * telah habis, piezo yang terpasang pada perangkat akan mengeluarkan 
+ * suara. Waktu maksimal yang dapat diatur pada program adalah 100 "jam".
+ * Timer yang diimplementasi pada program ini bukan timer yang presisi,
+ * yaitu 1 detik pada timer tidak sama dengan 1 detik yang sebenernya.
+ * 
+ * Cara mengoperasikan :
+ * - Terdapat 5 tombol untuk mengoperasikan timer
+ * - Dari kiri ke kanan, nama tombol-tombol tersebut adalah : set_timer/reset, hour, minute, second, start/stop
+ * - Tombol set_timer/reset dapat digunakan untuk mengubah state program dari state awal menjadi set_timer
+ * - Tombol set_timer/reset juga dapat digunakan untuk me-reset timer ke waktu awal yang telah disimpan
+ * - Tombol hour (mengubah jam), minute (mengubah menit), dan second (mengubah detik) hanya dapat digunakan pada state set_timer
+ * - Tombol start/stop dapat digunakan untuk memulai dan menghentikan timer dan hanya dapat digunakan ketika timer berada pada state awal
+ * - Jika pengguna tidak ingin menyelesaikan timer dan ingin kembali ke state awal, tekan tombol start/stop (jika timer masih menyala), kemudian tekan tombol set_timer/reset
+ * - Ketika timer telah selesai berjalan, piezo akan berbunyi. Untuk mematikan piezo, tekan tombol set_timer/reset
+ * 
+ */
+
 #include <LiquidCrystal.h>
 
 #define INIT 0
